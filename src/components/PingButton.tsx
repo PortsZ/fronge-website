@@ -25,7 +25,8 @@ const PingButton = () => {
   }, []);
 
   return (
-    <button className="bg-[#512da8] font-bold rounded py-3 tracking-wide px-6 hover:bg-[#1a1f2e]">
+    <button
+     className="bg-[#512da8] font-bold rounded py-3 tracking-wide px-6 hover:bg-[#1a1f2e]">
       Claim Airdrop!
     </button>
   );

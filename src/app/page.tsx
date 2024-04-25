@@ -22,11 +22,11 @@ const Home: NextPage = (props) => {
   return (
     <div className="w-full flex flex-col justify-start items-center px-16 py-4 gap-6">
       <WalletContextProvider>
-        <section className="fixed z-10 w-full h-full px-4">
-          <nav className="relative">
+        <nav className="fixed z-10 w-full px-4">
+          
             <AppBar />
-          </nav>
-        </section>
+          
+        </nav>
         
         <section className="p-8 justify-between items-center flex h-[100vh]">
           <Hero/>

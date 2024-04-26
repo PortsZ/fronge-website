@@ -10,9 +10,9 @@ import { dextools, telegram, twitter } from '@/data/links';
 const Socials = () => {
   return (
     <div className='z-10 flex  gap-2'>
-        <a href={twitter}><FaXTwitter className='text-3xl text-slate-900'/></a>
-        <a href={telegram}><FaTelegram className='text-3xl text-slate-900'/></a>
-        <a href={dextools}><img src='/dextools.svg' alt='dextools' className='w-20 drop-shadow-2xl bg-slate-900 rounded-xl p-1' /></a>
+        <a href={twitter} target='_blank'><FaXTwitter className='text-3xl text-slate-900'/></a>
+        <a href={telegram} target='_blank'><FaTelegram className='text-3xl text-slate-900'/></a>
+        <a href={dextools} target='_blank'><img src='/dextools.svg' alt='dextools' className='w-20 drop-shadow-2xl bg-slate-900 rounded-xl p-1' /></a>
     </div>
   )
 }

@@ -1,5 +1,7 @@
-export const dextools = 'https://www.dextools.io/';
+export const dextools = '';
 
-export const telegram = 'https://t.me/+8fjXL3vsOBRkY2Rh';
+export const telegram = 'https://t.me/frongecoinsol';
 
 export const twitter = 'https://twitter.com/frongcoinsol';
+
+export const contract=''

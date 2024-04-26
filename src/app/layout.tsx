@@ -2,10 +2,12 @@
 import type { Metadata } from "next";
 import "./globals.css";
 import AppBar from "@/components/AppBar";
+import Head from "next/head";
 
 export const metadata: Metadata = {
   title: "Fronge",
   description: "Fronge on solana, the wisest pepe frog monk in the world.",
+  
 };
 
 export default function RootLayout({
@@ -15,9 +17,9 @@ export default function RootLayout({
 }>) {
   return (
     <html lang="en">
-      <head>
-        <link rel="icon" href="/favicon.png" />
-      </head>
+     <head>
+        <link rel="icon" href="/favicon.png" sizes="any"/>
+     </head>
       <body className="w-full">
         <img
           className="fixed inset-0 w-full h-full object-cover pointer-events-none -z-10"

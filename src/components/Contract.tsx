@@ -3,9 +3,11 @@
 import React, { useEffect, useState } from "react";
 import { motion } from "framer-motion";
 import { FaRegCopy } from "react-icons/fa6";
+import { contract } from "@/data/links";
+
 
 const Contract = () => {
-  const contract = "SALDJFKNASDIASSAIDUDHIUADHUFNFJDISFOJSI";
+  
   const [copied, setCopied] = useState(false);
 
   const handleCopyContract = () => {
@@ -24,7 +26,7 @@ const Contract = () => {
   return (
     <div className="rounded-xl bg-[#1a1f2e] p-4 py-8 flex flex-col items-center justify-center ">
       <motion.div
-        whileHover={{ scale: 1.1, color: "#2cff79" }}
+        whileHover={{ scale: 1.02, color: "#2cff79" }}
         onClick={handleCopyContract}
         className="flex items-center justify-center px-4 w-full"
       >

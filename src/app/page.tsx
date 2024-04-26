@@ -13,43 +13,51 @@ import Roadmap from "@/components/Roadmap";
 import CTA from "@/components/CTA";
 import Hero from "@/components/Hero";
 import Footer from "@/components/Footer";
+import Contract from "@/components/Contract";
 
 const Home: NextPage = (props) => {
   const endpoint = web3.clusterApiUrl("devnet");
   const wallets = useMemo(() => [], []);
 
-
   return (
-    <div className="w-full flex flex-col justify-start items-center px-16 py-4 gap-6">
-      <WalletContextProvider>
-        <nav className="fixed z-10 w-full px-4">
-          
-            <AppBar />
-          
-        </nav>
-        
-        <section className="p-8 justify-between items-center flex h-[100vh]">
-          <Hero/>
+    <WalletContextProvider>
+      <div className=" flex flex-col justify-center items-center p-2 md:px-16 py-4 gap-6">
+        <section className="p-4 lg:p-8 justify-center items-center flex flex-col lg:h-[80vh]">
+          <Hero />
         </section>
-        <section className="p-10 justify-between items-center flex h-[80vh]">
-          <Frog className="relative w-[20rem] h-[34rem] left-20 object-contain overflow-hidden" />
+        <section className="w-full p-4 md:p-8 md:px-16 ">
+          <Contract />
+        </section>
+        <section className="p-4 lg:p-10 md:justify-between items-center flex flex-col md:flex-row">
+          <Frog
+            className="
+          w-48 
+          md:relative md:w-1/3 md:h-96 lg:w-[20rem] lg:h-[34rem] lg:left-20 
+          
+          object-contain overflow-hidden"
+          />
           <About />
         </section>
-        <section className="p-10 justify-between items-center flex h-[80vh]">
-          <Tokenomics/>
+        <section className="p-4 md:p-10 justify-center items-center flex">
+          <Tokenomics />
         </section>
-        <section className="p-10 justify-between items-center flex h-[80vh]">
-          <Roadmap/>
-          <Frog className="relative scale-x-[-1] w-[20rem] h-[34rem] object-contain overflow-hidden" />
+        <section className="p-4 lg:p-10 justify-between items-center flex ">
+          <Roadmap />
+          <Frog
+            className="
+            hidden md:block scale-x-[-1] w-48
+            md:relative md:w-[12rem] md:h-[20rem] lg:w-[20rem] lg:h-[34rem] lg:left-20 
+            object-contain overflow-hidden"
+          />
         </section>
-        <section className="p-10 justify-center items-center flex h-[50vh]">
-        <CTA/>
+        <section className="p-4 md:p-10 justify-center items-center flex ">
+          <CTA />
         </section>
         <section className="w-full">
-          <Footer/>
+          <Footer />
         </section>
-      </WalletContextProvider>
-    </div>
+      </div>
+    </WalletContextProvider>
   );
 };
 

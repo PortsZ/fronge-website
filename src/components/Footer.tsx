@@ -1,47 +1,19 @@
+/* eslint-disable @next/next/no-img-element */
 "use client";
-import { motion } from "framer-motion";
-import React, {useEffect, useState} from "react";
+import React from "react";
 import Socials from "./Socials";
+import Contract from "./Contract";
 
 const Footer = () => {
-  const contract = "SALDJFKNASDIUFNFJDISFOJSI";
-  const [copied, setCopied] = useState(false);
-
-  const handleCopyContract = () => {
-    navigator.clipboard.writeText(contract);
-    
-    setCopied(true);
-  };
-
-  useEffect(() => {
-    if (copied) {
-      setTimeout(() => {
-        setCopied(false);
-      }, 2000);
-    }
-  }, [copied]);
-
   return (
     <div>
-      <footer className="w-full rounded-xl backdrop-blur-xl bg-opacity-70 bg-[#512da8] text-white p-4">
-        <div className="flex justify-between items-center">
-          <div className="flex gap-8 ">
+      <footer className="flex flex-1 rounded-xl backdrop-blur-xl bg-opacity-70 bg-[#512da8] text-white p-4">
+        <div className="flex gap-6 flex-col lg:flex-row w-full justify-between items-center">
+          <div className="flex gap-8 justify-center lg:justify-start">
             <img src="/solanaLogo.png" alt="logo" className="w-36" />
           </div>
-          <div>
-            <motion.p
-              whileHover={{ scale: 1.1, color: "#060b17" }}
-              onClick={handleCopyContract}
-            >
-              <span className="pointer-events-none">CA : {contract}</span>
-              
-                
-            </motion.p>
-            {copied && (
-              <span className="absolute font-logo text-xs text-green-500">
-                Copied to clipboard! 🚀
-              </span>
-            )}
+          <div className="w-full md:w-1/2 ">
+            <Contract />
           </div>
           <div>
             <Socials />
